@@ -2,7 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 
+После этого я добавила в него код из туториала: https://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial
+
 ## Development server
+
+Чтобы запустить, нужно подгрузить зависимости `ng install`, а потом:
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
