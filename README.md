@@ -1,4 +1,4 @@
-# AngularSiteExample
+# Attika-web
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 
@@ -17,6 +17,14 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Build amd run in docker container
+
+```
+docker build --file Dockerfile --tag attika/auth:v0 .
+docker run -d --name attika_web -p 3001:4200 -it attika/auth:v0
+```
+Connect: `http://localhost:3001`
 
 ## Running unit tests
 
