@@ -2,10 +2,20 @@
 <div class="jumbotron">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 offset-sm-3">
+            <!--Connection ends without depending on opened page-->
+            <!--FIXME: move to login page?-->
+            <div *ngIf="connectionTimeout==false; else connectionLost"
+             class="col-sm-6 offset-sm-3">
                 <alert></alert>
                 <router-outlet></router-outlet>
             </div>
+            <ng-template #connectionLost>
+                <div class="col-sm-6 offset-sm-3">
+                    <p>Connection lost. Please refresh this page</p>
+                    <!--TODO: styles?-->
+                    <button [routerLink]="['/home']" (click)="refresh()">Refresh</button>
+                </div>
+            </ng-template>
         </div>
     </div>
 </div>
